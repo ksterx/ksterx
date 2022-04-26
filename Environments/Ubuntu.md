@@ -31,9 +31,15 @@ gnome-tweaks
 set completion-ignore-case on
 ```
 
-#### 5. Install Docker, CUDA Toolkit & NVIDIA Docker [[Page]](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#installing-docker-ce)
+#### 5. Install Docker, CUDA Toolkit & NVIDIA Docker
+
+Follow the instructions on the following page: [[Page]](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#installing-docker-ce)
 
 #### 6. Install following apps
 
 - Visual Studio Code
 - Slack
+
+#### 7. Install Anaconda
+
+Follow the instructions on the following page: [[Page]](https://docs.anaconda.com/anaconda/install/linux/)
