@@ -43,3 +43,14 @@ Follow the instructions on the following page: [[Page]](https://docs.nvidia.com/
 #### 7. Install Anaconda
 
 Follow the instructions on the following page: [[Page]](https://docs.anaconda.com/anaconda/install/linux/)
+
+#### 8. Install Albert
+
+For Ubuntu 20.04
+
+```
+curl "https://build.opensuse.org/projects/home:manuelschneid3r/public_key" | sudo apt-key add -
+sudo sh -c 'echo "deb http://download.opensuse.org/repositories/home:/manuelschneid3r/xUbuntu_20.04/ /" >> /etc/apt/sources.list.d/home:manuelschneid3r.list'
+sudo apt update
+sudo apt install albert
+```
