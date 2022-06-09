@@ -1,4 +1,7 @@
-## Set up
+# Ubuntu
+---
+
+## Setup
 
 #### 1. Change the default brower to Google Chrome
 
@@ -25,7 +28,7 @@ gnome-tweaks
 # 2. Caps Lock behavior -> Swap ESC and Caps Lock
 ```
 
-#### 4. Change completion setting by adding the following line to `~/.inputrc`
+#### 4. Change completion setting
 
 ```bash
 echo "set completion-ignore-case on" >> ~/.inputrc

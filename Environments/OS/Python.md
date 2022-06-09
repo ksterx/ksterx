@@ -1,4 +1,7 @@
-## Anaconda
+# Python
+---
+
+## 1. Anaconda
 
 #### Create a new environment
 
@@ -36,9 +39,7 @@ conda env create -f <file>
 conda env export -f <file>
 ```
 
----
-
-## Libraries
+## 2. Libraries
 
 #### Scientific Computing
 
@@ -48,16 +49,54 @@ conda env export -f <file>
 #### Deep Learning
 
 - PyTorch
-- TensorFlow
 - pytorch-lightning
+- scikit-learn
+- TensorFlow
 - torchinfo
 - torch-tb-profiler
 
 #### Reinforcement Learning
 
-- stable-baselines3[mpi]
 - imitation
+- stable-baselines3[mpi]
 
 #### Hyperparameter Optimization
 
 - optuna
+- hydra
+
+#### Development
+
+- pytest
+- black
+- flake8
+- isort
+- jupyter-kite
+- jupyter-tensorboard
+- jupyterlab
+- jupyterlab-git
+- jupytext
+- heartrate
+
+#### Analysis
+
+- autoviz
+- bokeh
+- matplotlib
+- pandas
+- plotly
+- seaborn
+
+#### Workflow
+
+- kedro
+- kedro-viz
+- luigi
+- mlflow
+
+#### Image Processing
+
+- ffmpeg
+- opencv-python
+- opencv-contrib-python
+- scikit-image
