@@ -1,0 +1,8 @@
+.vscode/
+.ipynb_checkpoints/
+.idea/
+.DS_Store
+.Trash-*
+.history/
+ipython_config.py
+Untitled.ipynb
