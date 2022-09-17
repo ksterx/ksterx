@@ -1,0 +1,42 @@
+FROM baseImageYouWantToUse
+
+LABEL maintainer="ksterx <kostonerx@gmail.com>"
+
+# Change the arguments to your needs
+ARG USERNAME=ksterx
+ARG ENV_NAME=env_name
+ARG PYTHON_VERSION=3.10
+
+ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
+ENV TZ=Asia/Tokyo
+
+# Set timezone as $TZ
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+
+# Install apt packages
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+    git \
+    make \
+    sudo
+
+# Add user as sudoer
+RUN useradd --create-home ${USERNAME} \
+    && gpasswd -a ${USERNAME} sudo \
+    && echo "%sudo ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers \
+    && chown -R ${USERNAME}:${USERNAME} /opt/conda
+USER ${USERNAME}
+WORKDIR /home/${USERNAME}
+RUN echo "set completion-ignore-case on" >> /home/${USERNAME}/.inputrc
+
+# Set up environment
+ENV PATH "/home/${USERNAME}/.local/bin:$PATH"
+ENV PATH /opt/conda/envs/${ENV_NAME}/bin:$PATH
+RUN pip install -U -q pip \
+    && conda update -n base -c defaults -q conda \
+    && conda create -n ${ENV_NAME} -y -q python=${PYTHON_VERSION} \
+    && conda init bash\
+    && echo "conda activate ${ENV_NAME}" >> /home/${USERNAME}/.bashrc \
+    && . /home/${USERNAME}/.bashrc
+
+WORKDIR /workspace
