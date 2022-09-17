@@ -1,39 +1,40 @@
 # Python
+
 ---
 
-## 1. Anaconda
+## 1. Anaconda/Miniconda
 
-#### Create a new environment
+**Create a new environment**
 
 ```bash
 conda create -n <env name> python=<version>
 ```
 
-#### Activate the environment
+**Activate the environment**
 
 ```bash
 conda activate <env name>
 ```
 
-#### Install packages
+**Install packages**
 
 ```bash
 conda install <package>
 ```
 
-#### Deactivate the environment
+**Deactivate the environment**
 
 ```bash
 conda deactivate
 ```
 
-#### Create an environment from a file
+**Create an environment from a file**
 
 ```bash
 conda env create -f <file>
 ```
 
-#### Export an environment to a file
+**Export an environment to a file**
 
 ```bash
 conda env export -f <file>
@@ -65,18 +66,14 @@ conda env export -f <file>
 - optuna
 - hydra
 
-#### Development
+#### Utilities
 
-- pytest
 - black
 - flake8
-- isort
-- jupyter-kite
-- jupyter-tensorboard
-- jupyterlab
-- jupyterlab-git
-- jupytext
 - heartrate
+- isort
+- line_profiler
+- pytest
 
 #### Analysis
 
@@ -84,6 +81,7 @@ conda env export -f <file>
 - bokeh
 - matplotlib
 - pandas
+- pandas-profiling
 - plotly
 - seaborn
 
@@ -100,3 +98,12 @@ conda env export -f <file>
 - opencv-python
 - opencv-contrib-python
 - scikit-image
+
+#### Jupyter
+
+- jupyter-kite
+- jupyter-tensorboard
+- jupyterlab
+- jupyterlab-git
+- jupytext
+- theme-darcula

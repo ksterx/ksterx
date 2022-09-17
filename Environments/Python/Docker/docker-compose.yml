@@ -1,0 +1,20 @@
+version: "3"
+services:
+  main:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        USER_NAME: ksterx
+        ENV_NAME: <env_name>
+        PYTHON_VERSION: 3.10
+    command: jupyter lab
+    container_name: <container_name>
+    # image: <image_name>
+    ports:
+      - "8888:8888"
+    restart: always
+    tty: true
+    volumes:
+      - ../:/workspace
+    working_dir: /workspace
