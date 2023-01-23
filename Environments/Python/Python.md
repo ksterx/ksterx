@@ -59,7 +59,7 @@ conda env export -f <file>
 #### Reinforcement Learning
 
 - imitation
-- stable-baselines3[mpi]
+- stable-baselines3[all]
 
 #### Hyperparameter Optimization
 
@@ -74,6 +74,7 @@ conda env export -f <file>
 - isort
 - line_profiler
 - pytest
+- pyglet
 
 #### Analysis
 

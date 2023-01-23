@@ -1,4 +1,5 @@
 # Ubuntu
+
 ---
 
 ## Setup
@@ -42,8 +43,21 @@ Follow the instructions on the following page: [[Page]](https://docs.nvidia.com/
 
 - Visual Studio Code
 - Slack
+- TeamViewer
+- Blender
+- UE
+- Zoom
+- CopyQ
+- GIMP
+- Inkscape
+- Omniverse
+- Psensor
+- Solaar
+- Spotify
+- Ulauncer/Albert
+- VLC
 
-#### 7. Install Anaconda
+#### 7. Install Anaconda/Miniconda
 
 Follow the instructions on the following page: [[Page]](https://docs.anaconda.com/anaconda/install/linux/)
 
@@ -57,3 +71,5 @@ sudo sh -c 'echo "deb http://download.opensuse.org/repositories/home:/manuelschn
 sudo apt update
 sudo apt install albert
 ```
+
+#### 9. Mount Google Drive
