@@ -3,13 +3,13 @@ services:
   main:
     build:
       context: .
-      dockerfile: Dockerfile-pytorch
+      dockerfile: Dockerfile
       args:
         USER_NAME: ksterx
-        ENV_NAME: ai
+        ENV_NAME: <env_name>
         PYTHON_VERSION: 3.10
     command: jupyter lab
-    container_name: ai
+    container_name: <container_name>
     # image: <image_name>
     ports:
       - "8888:8888"
