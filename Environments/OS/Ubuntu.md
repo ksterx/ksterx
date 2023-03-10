@@ -22,7 +22,8 @@ git clone
 #### 2. Add Japanese language to the system
 
 - Settings > Region & Language > Japanese (Manage Installed Languages > Finish installing > Log out)
-- Settings > Region & Language > Japanese (Mozc) > Customize Keymap > Change all Hankaku/Zenkaku to Ctrl Space
+- Mozc > Tools > Properties > General > Keymap style > Customize > Change all Hankaku/Zenkaku to Ctrl Space
+- Download my dictionary from Google Drive and import it to Mozc dictionary by Mozc > Tools > Properties > Dictionary > Edit user dictionary > Tools > Import to current dictionary
 
 #### 3. Remap keys
 
@@ -30,7 +31,10 @@ Install tweaks
 
 ```bash
 sudo apt update
+<<<<<<< HEAD
 sudo add-apt-repository universe
+=======
+>>>>>>> 795d4c6f5bd1525a49aaaaa41af538380269a04e
 sudo apt install gnome-tweaks
 ```
 
@@ -51,7 +55,21 @@ echo "set completion-ignore-case on" >> ~/.inputrc
 
 #### 5. Install Docker, CUDA Toolkit & NVIDIA Docker
 
-Follow the instructions on the following page: [[Page]](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#installing-docker-ce)
+- Nvidia Docker Installation Guide [[Page]](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html#installing-docker-ce)
+
+- CUDA Toolkit Archive [Page](https://developer.nvidia.com/cuda-toolkit-archive)
+
+For Ubuntu 22.04, CUDA 11.7.1, run the following commands:
+
+```bash
+wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu2204/x86_64/cuda-ubuntu2204.pin
+sudo mv cuda-ubuntu2204.pin /etc/apt/preferences.d/cuda-repository-pin-600
+wget https://developer.download.nvidia.com/compute/cuda/11.7.1/local_installers/cuda-repo-ubuntu2204-11-7-local_11.7.1-515.65.01-1_amd64.deb
+sudo dpkg -i cuda-repo-ubuntu2204-11-7-local_11.7.1-515.65.01-1_amd64.deb
+sudo cp /var/cuda-repo-ubuntu2204-11-7-local/cuda-*-keyring.gpg /usr/share/keyrings/
+sudo apt-get update
+sudo apt-get -y install cuda-drivers  # Install Nvidia Driver & CUDA Toolkit
+```
 
 #### 6. Install following apps
 

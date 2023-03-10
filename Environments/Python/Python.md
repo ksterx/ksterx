@@ -60,6 +60,8 @@ conda env export -f <file>
 
 - imitation
 - stable-baselines3[all]
+- "ray[air]"
+- gym
 
 #### Hyperparameter Optimization
 
