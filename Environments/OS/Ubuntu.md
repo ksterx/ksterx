@@ -6,6 +6,19 @@
 
 #### 1. Change the default brower to Google Chrome
 
+#### 2. Download git
+
+```bash
+apt-get install git
+```
+
+#### 3. Clone this repository
+
+```bash
+mkdir ~/Development
+git clone 
+```
+
 #### 2. Add Japanese language to the system
 
 - Settings > Region & Language > Japanese (Manage Installed Languages > Finish installing > Log out)
@@ -17,7 +30,8 @@ Install tweaks
 
 ```bash
 sudo apt update
-sudo apt install gnome-tweak-tool
+sudo add-apt-repository universe
+sudo apt install gnome-tweaks
 ```
 
 and remap the keys to the following:
@@ -56,6 +70,9 @@ Follow the instructions on the following page: [[Page]](https://docs.nvidia.com/
 - Spotify
 - Ulauncer/Albert
 - VLC
+- MarkText
+- Notion
+- ClickUp
 
 #### 7. Install Anaconda/Miniconda
 
