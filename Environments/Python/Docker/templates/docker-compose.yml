@@ -18,3 +18,10 @@ services:
     volumes:
       - ../:/workspace
     working_dir: /workspace
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [ gpu ]

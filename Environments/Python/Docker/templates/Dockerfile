@@ -11,14 +11,18 @@ ENV LANG=C.UTF-8 LC_ALL=C.UTF-8
 ENV TZ=Asia/Tokyo
 
 # Set timezone as $TZ
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
+RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
+    && echo $TZ > /etc/timezone
 
 # Install apt packages
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
+    curl \
     git \
     make \
-    sudo
+    sudo \
+    vim \
+    wget
 
 # Add user as sudoer
 RUN useradd --create-home ${USER_NAME} \

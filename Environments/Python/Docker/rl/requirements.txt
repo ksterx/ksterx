@@ -1,0 +1,11 @@
+matplotlib
+pandas
+numpy
+seaborn
+tqdm
+jupyterlab
+hydra-core
+gymnasium
+ray[rllib]
+tensorflow
+pettingzoo[all]

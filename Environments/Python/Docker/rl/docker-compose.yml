@@ -1,0 +1,12 @@
+version: "3"
+services:
+  main:
+    container_name: rl
+    image: ksterx/rl:latest
+    ports:
+      - "8888:8888"
+    restart: always
+    tty: true
+    volumes:
+      - ../:/workspace
+    working_dir: /workspace
