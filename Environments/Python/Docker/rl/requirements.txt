@@ -5,6 +5,9 @@ seaborn
 tqdm
 jupyterlab
 hydra-core
+black
+flake8
+ipywidgets
 gymnasium
 ray[rllib]
 tensorflow
