@@ -11,17 +11,24 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
 
 # Install apt packages
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends \
+    && apt-get install -y --no-install-recommends  \
+    build-essential \
     curl \
     git \
-    make \
     sudo \
-    swig \
     vim \
-    wget
+    wget \
+    xvfb \
+    xorg-dev \
+    ffmpeg \
+    swig \
+    python-opengl \
+    cmake
 
 RUN echo "set completion-ignore-case on" >> ${HOME}/.inputrc
 
 COPY requirements.txt /tmp/requirements.txt
 RUN pip install -U -q pip \
     && pip install -U -q -r /tmp/requirements.txt
+
+CMD ["/bin/bash"]

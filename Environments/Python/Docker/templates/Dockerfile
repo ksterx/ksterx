@@ -1,4 +1,4 @@
-FROM baseImageYouWantToUse
+FROM baseImageToUse
 
 LABEL maintainer="ksterx <kostonerx@gmail.com>"
 
@@ -17,9 +17,9 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
 # Install apt packages
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
+    build-essential \
     curl \
     git \
-    make \
     sudo \
     vim \
     wget
@@ -42,3 +42,5 @@ RUN pip install -U -q pip \
     && conda init bash\
     && echo "conda activate ${ENV_NAME}" >> /home/${USER_NAME}/.bashrc \
     && . /home/${USER_NAME}/.bashrc
+
+CMD ["/bin/bash"]
