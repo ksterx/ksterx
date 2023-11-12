@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto Mono', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     margin: 0;
     padding: 0;
     color: #333333;
@@ -7,6 +7,9 @@ body {
     text-align: center;
 }
 
+p {
+    font-family: 'Roboto', sans-serif;
+}
 
 header {
     background: #5F9EA0;
@@ -22,9 +25,7 @@ nav ul li a:hover {
     color: #34495e;
 }
 
-/* ナビゲーションバーのスタイル */
 nav {
-    /* ナビゲーションバーの背景色 */
     padding: 10px 0;
 }
 
@@ -42,13 +43,11 @@ nav ul li {
 
 nav a {
     text-decoration: none;
-    /* リンクの色 */
     font-weight: 500;
 }
 
 nav a:hover {
     text-decoration: underline;
-    /* ホバー時に下線を表示 */
 }
 
 header h1 {
@@ -67,7 +66,6 @@ section {
     padding: 20px;
     border-radius: 10px;
     max-width: 800px;
-    /* セクションの最大幅を設定 */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: calc(100% - 40px);
 }
@@ -88,69 +86,43 @@ footer {
 
 #about img {
     max-width: 200px;
-    /* 最大幅を設定 */
     height: auto;
-    /* 高さは自動調整 */
     border-radius: 50%;
-    /* 丸みを持たせる */
     border: 3px solid #333;
-    /* 枠線を追加 */
     margin-top: 20px;
-    /* 上のマージンを設定 */
 }
 
-#resume {
+#about,
+#resume,
+#interests {
     text-align: center;
-    /* Resumeセクション全体を中央揃えに */
 }
+
 
 #resume ul {
     display: inline-block;
-    /* ブロック要素をインラインブロックにして中央揃えに対応 */
     text-align: left;
-    /* リストアイテムのテキストを左揃えに */
     padding-left: 20px;
-    /* ブレットとテキストの間に適切なスペースを設ける */
     margin: 0 auto;
-    /* マージンを自動にして中央に配置 */
 }
 
 #resume li {
     text-align: left;
-    /* リストアイテムのテキストを左揃えに */
     margin-bottom: 10px;
-    /* リストアイテム間のスペース */
 }
 
-
-#contact a {
-    color: #1DA1F2;
-    /* Twitterのブランドカラー */
-    text-decoration: none;
-    /* 下線を消す */
-}
-
-#contact a:hover {
-    text-decoration: underline;
-    /* ホバー時に下線を表示 */
-}
 
 .button {
     background-color: #bdc3c7;
-    /* ライトグレー */
-    /* その他のボタンスタイル */
 }
 
 
-/* タイトルとサブタイトルの色を変更 */
 .title {
     color: #34495e;
-    /* 明るいグレー */
 }
 
 .subtitle {
     color: #37495cbb;
-    /* 暗めのグレー */
 }
 
 
@@ -166,45 +138,20 @@ footer {
     background-color: #8FDBE6;
 }
 
-.skill-bar {
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    height: 20px;
-    width: 100%;
-    margin: 10px 0;
-}
-
-.skill-percentage {
-    background-color: #4CAF50;
-    height: 100%;
-    border-radius: 8px;
-}
-
-.portfolio-item {
-    margin-bottom: 20px;
-}
-
-.portfolio-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-/* 中央のコンテンツエリアのスタイリング */
 .container {
     max-width: 800px;
-    /* 最大幅を設定 */
     margin: 20px auto;
-    /* 上下のマージンと自動的に左右のマージンを設定 */
     padding: 0 20px;
-    /* 内側の余白を設定 */
 }
 
-/* レスポンシブデザイン */
+#about p,
+#interests p {
+    text-align: left;
+}
+
 @media screen and (max-width: 768px) {
     nav ul {
         flex-direction: column;
-        /* 小さい画面ではリンクを縦に並べる */
     }
 
     nav ul li {
@@ -213,7 +160,6 @@ footer {
 
     #resume ul li {
         width: auto;
-        /* 画面が狭い時は幅を自動に */
     }
 
     .container {
@@ -222,7 +168,6 @@ footer {
 
     section {
         width: calc(100% - 20px);
-        /* 小さい画面では少し狭い隙間 */
         margin: 10px auto;
         padding: 15px;
     }
