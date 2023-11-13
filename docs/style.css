@@ -172,3 +172,42 @@ footer {
         padding: 15px;
     }
 }
+
+
+@media screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    #resume ul li {
+        width: auto;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    section {
+        width: calc(100% - 20px);
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-size: 1.5em;
+    }
+
+    .container p {
+        font-size: 1em;
+    }
+}
