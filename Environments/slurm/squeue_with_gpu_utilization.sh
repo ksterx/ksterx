@@ -1,0 +1,1 @@
+squeue -o "%.8i %.10P %.15j %.30u %.2t %.10M %.5D %.20R %c" | while read -r line; do if [[ $line == JOBID* ]]; then echo -e "$line GPU_COUNT"; else job_id=$(echo "$line" | awk '{print $1}'); gpu_count=$(scontrol show job "$job_id" | grep -oP 'TresPerNode=.*?\Kgpu:\K\d+'); echo " $line $gpu_count"; fi; done
